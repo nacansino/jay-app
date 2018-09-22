@@ -20,7 +20,7 @@ class Home extends Component {
     return (
       <div className={classes.root}>
         <Header />
-        This is Home
+        Jay's Home
         <Footer />
       </div>
     );
