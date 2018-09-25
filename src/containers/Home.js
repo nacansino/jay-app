@@ -31,8 +31,9 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <div className={classes.root}>Welcome Home</div>
-        <Segment imgname={imgname} />
+        <Segment imgname={'main'} />
+        <Segment imgname={'adventure'} />
+        <Segment imgname={'life'} />
         <Footer />
       </div>
     );
