@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Segment from '../components/Segment'
-import Image from 'react-image-resizer';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
