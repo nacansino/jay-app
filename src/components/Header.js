@@ -9,22 +9,18 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
-    backgroundColor:'rgba(0,0,0,0.2)'
-  },
-  tbar:{
-    backgroundColor:'transparent',
-    boxShadow: "none",
-    overflow: "hidden"
   },
   button: {
     margin: theme.spacing.unit,
   },
-  input: {
-    display: 'none',
-  },
   appbar:{
-    backgroundColor: 'transparent',
-    position:'relative'
+    backgroundColor:'rgba(0,0,0,0)',
+    boxShadow: "none",
+    position:'absolute'
+  },
+  bname:{
+    color: 'rgba(0,0,0,1)',
+    fontWeight: 'bold'
   }
 });
 
@@ -34,8 +30,8 @@ function Header(props) {
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar}>
-        <Toolbar className={classes.tbar}>
-          <Typography variant="body2" color="inherit">
+        <Toolbar>
+          <Typography variant="body2" className={classes.bname}>
             JAY CANSINO BLOG
           </Typography>
           <Button className={classes.button} href="#">Default</Button>

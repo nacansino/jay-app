@@ -12,14 +12,14 @@ import H_adventure from '../assets/img/h_adventure.jpg'
 
 const styles = {
   segment: {
-    width: '100%',
-    display: 'flex',
     backgroundPosition: 'top',
     backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100vh',
-    backgroundSize: '100%'
+    width: '100vw'
   },
 };
 
@@ -41,7 +41,7 @@ class Segment extends Component {
   const {classes} = this.props;
   return (
     <div className={classes.segment} style={dispImg(this.props.imgname)}>
-      <Typography>{this.props.imgname}</Typography>
+      <Typography></Typography>
     </div>
   );
   }
