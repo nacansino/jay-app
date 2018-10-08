@@ -55,16 +55,22 @@ class Header extends Component {
 
   render() {
     const {classes} = this.props;
+
+    const headerMenu=['ABOUT ME', 'WORKS','BLOGS','CONTACT'];//change this to add headerMenu
     return (
       <div className={classes.root}>
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
             <Button classes={classes.bTitle} href="/">JAY CANSINO BLOG</Button>
             <div className={classes.hMenu}>
-              <Button className={this.props.sliderSelectedItem==0 ? classes.button_current : classes.button} onClick={this.bandler(0)}>ABOUT ME</Button>
-              <Button className={this.props.sliderSelectedItem==1 ? classes.button_current : classes.button} onClick={this.bandler(1)}>WORKS</Button>
-              <Button className={this.props.sliderSelectedItem==2 ? classes.button_current : classes.button} onClick={this.bandler(2)}>BLOGS</Button>
-              <Button className={this.props.sliderSelectedItem==3 ? classes.button_current : classes.button} onClick={this.bandler(3)}>CONTACT</Button>
+              {
+                headerMenu.map((item,index) =>
+                <Button className={this.props.sliderSelectedItem==index ? classes.button_current : classes.button}
+                  onClick={this.bandler(index)}>
+                  {item}
+                </Button>
+              )
+              }
             </div>
             <SocialMediaButtons />
           </Toolbar>
