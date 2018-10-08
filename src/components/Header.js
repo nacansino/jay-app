@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -7,7 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import SocialMediaButtons from '../components/SocialMediaButtons'
+import SocialMediaButtons from '../components/SocialMediaButtons';
 
 const styles = theme => ({
   root: {
@@ -39,22 +39,36 @@ const styles = theme => ({
   },
 });
 
-function Header(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="static" className={classes.appbar}>
-        <Toolbar>
-          <Button classes={classes.bTitle} href="/">JAY CANSINO BLOG</Button>
-          <div className={classes.hMenu}>
-            <Button className={classes.button} href="#">Default</Button>
-            <Button className={classes.button} href="/about">About</Button>
-          </div>
-          <SocialMediaButtons />
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+
+
+class Header extends Component {
+  bandler = (index) => {
+    return () => {
+      this.props.onClick(index);
+      console.log('Clicked button ' + index + 'of the menu');
+    }
+  };
+
+  render() {
+    const {classes} = this.props;
+    return (
+      <div className={classes.root}>
+        <AppBar position="static" className={classes.appbar}>
+          <Toolbar>
+            <Button classes={classes.bTitle} href="/">JAY CANSINO BLOG</Button>
+            <div className={classes.hMenu}>
+              <Button className={classes.button} onClick={this.bandler(0)}>ABOUT ME</Button>
+              <Button className={classes.button} onClick={this.bandler(1)}>WORKS</Button>
+              <Button className={classes.button} onClick={this.bandler(2)}>BLOGS</Button>
+              <Button className={classes.button} onClick={this.bandler(3)}>CONTACT</Button>
+              <Button className={classes.button} onClick={this.bandler(4)}></Button>
+            </div>
+            <SocialMediaButtons />
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
 
 Header.propTypes = {

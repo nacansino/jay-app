@@ -10,17 +10,13 @@ import {Carousel} from 'react-responsive-carousel'
 import Fade from 'react-reveal/Fade'
 
 class SliderContainer extends Component {
-  state = {
-    sliderSelectedItem: 0,
-  };
-
   sliderChange = (index, element) => {
-    this.setState({sliderSelectedItem: index})
+
   }
 
   render() {
     return (
-      <Carousel selectedItem={this.state.sliderSelectedItem}
+      <Carousel selectedItem={this.props.sliderSelectedItem}
          showThumbs={false} axis='vertical'
          showStatus={false}
          useKeyboardArrows={true}

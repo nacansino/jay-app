@@ -17,17 +17,30 @@ const styles = {
   }
 };
 
-class Home extends Component {
+class Navigator extends Component {
+  state = {
+    sliderSelectedItem: 0,
+  };
+
+  headerOnClick = (index) => {
+    console.log('received index '+ index);
+    this.setState(
+      {
+        sliderSelectedItem: index
+      },
+    );
+  }
+
   render() {
     const {classes} = this.props;
     return (
       <div>
-        <Header />
-        <SliderContainer />
+        <Header onClick={this.headerOnClick}/>
+        <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}/>
         <Footer />
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Navigator);
