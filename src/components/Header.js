@@ -13,6 +13,10 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
   },
+  button_home: {
+    margin: theme.spacing.unit,
+
+  },
   appbar:{
     backgroundColor:'rgba(0,0,0,0)',
     boxShadow: "none",
@@ -31,9 +35,7 @@ function Header(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-          <Typography variant="body2" className={classes.bname}>
-            JAY CANSINO BLOG
-          </Typography>
+          <Button classes={classes.contained} href="/">JAY CANSINO BLOG</Button>
           <Button className={classes.button} href="#">Default</Button>
           <Button className={classes.button} href="/about">About</Button>
         </Toolbar>

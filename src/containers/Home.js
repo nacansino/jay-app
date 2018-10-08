@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Segment from '../components/Segment'
+import SliderContainer from '../components/SliderContainer'
+
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
   root: {
-    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'flex-start',
+    width: '100%',
     height: '100vh'
   }
 };
@@ -20,9 +23,7 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <Segment imgname={'main'} />
-        <Segment imgname={'adventure'} />
-        <Segment imgname={'life'} />
+        <SliderContainer />
         <Footer />
       </div>
     );

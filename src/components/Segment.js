@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import H_main from '../assets/img/h_main.jpg'
@@ -18,12 +16,11 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '100vh',
-    width: '100vw'
+    height: '100vh'
   },
 };
 
-function dispImg(param) {
+const dispImg = (param) => {
   switch(param) {
     case 'main':
       return {backgroundImage: 'url(' + H_main + ')'};
@@ -41,7 +38,7 @@ class Segment extends Component {
   const {classes} = this.props;
   return (
     <div className={classes.segment} style={dispImg(this.props.imgname)}>
-      <Typography></Typography>
+      {this.props.children}
     </div>
   );
   }
