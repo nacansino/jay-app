@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Segment from '../components/Segment'
+import SliderContainer from '../components/SliderContainer'
 
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 const styles = {
   root: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100vh',
-    width: '100%'
-  },
+    alignContent: 'flex-start',
+    width: '100%',
+    height: '100vh'
+  }
 };
 
 class Home extends Component {
   render() {
     const {classes} = this.props;
     return (
-      <div className={classes.root}>
+      <div>
         <Header />
-        This is Home
+        <SliderContainer />
         <Footer />
       </div>
     );
