@@ -20,7 +20,6 @@ function Footer(props) {
   const { classes } = props;
 
   return (
-    <div>
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <Typography variant="body2" color="inherit">
@@ -28,7 +27,6 @@ function Footer(props) {
           </Typography>
         </Toolbar>
       </AppBar>
-    </div>
   );
 }
 
