@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import H_main from '../assets/img/h_main.jpg'
 import H_life from '../assets/img/h_life.jpg'
 import H_adventure from '../assets/img/h_adventure.jpg'
+import H_contact from '../assets/img/h_contact.jpg'
 
 const styles = {
   segment: {
@@ -22,12 +23,14 @@ const styles = {
 
 const dispImg = (param) => {
   switch(param) {
-    case 'main':
+    case 'welcome':
       return {backgroundImage: 'url(' + H_main + ')'};
     case 'life':
       return {backgroundImage: 'url(' + H_life + ')'};
     case 'adventure':
       return {backgroundImage: 'url(' + H_adventure + ')'};
+    case 'contact':
+      return {backgroundImage: 'url(' + H_contact + ')'};
     default:
       return {backgroundImage: 'url(' + H_main + ')'};
   }

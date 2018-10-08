@@ -23,9 +23,10 @@ class SliderContainer extends Component {
          showArrows={false}
          onChange={this.sliderChange}
          >
-        <Segment imgname={'main'}></Segment>
+        <Segment imgname={'welcome'}></Segment>
         <Segment imgname={'adventure'}></Segment>
         <Segment imgname={'life'}></Segment>
+        <Segment imgname={'contact'}></Segment>
       </Carousel>
     );
   }

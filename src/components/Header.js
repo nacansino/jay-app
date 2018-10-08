@@ -16,6 +16,10 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
   },
+  button_current: {
+    margin: theme.spacing.unit,
+    color: 'rgba(0, 0, 0, 0.5)',
+  },
   button_home: {
     margin: theme.spacing.unit,
   },
@@ -57,11 +61,10 @@ class Header extends Component {
           <Toolbar>
             <Button classes={classes.bTitle} href="/">JAY CANSINO BLOG</Button>
             <div className={classes.hMenu}>
-              <Button className={classes.button} onClick={this.bandler(0)}>ABOUT ME</Button>
-              <Button className={classes.button} onClick={this.bandler(1)}>WORKS</Button>
-              <Button className={classes.button} onClick={this.bandler(2)}>BLOGS</Button>
-              <Button className={classes.button} onClick={this.bandler(3)}>CONTACT</Button>
-              <Button className={classes.button} onClick={this.bandler(4)}></Button>
+              <Button className={this.props.sliderSelectedItem==0 ? classes.button_current : classes.button} onClick={this.bandler(0)}>ABOUT ME</Button>
+              <Button className={this.props.sliderSelectedItem==1 ? classes.button_current : classes.button} onClick={this.bandler(1)}>WORKS</Button>
+              <Button className={this.props.sliderSelectedItem==2 ? classes.button_current : classes.button} onClick={this.bandler(2)}>BLOGS</Button>
+              <Button className={this.props.sliderSelectedItem==3 ? classes.button_current : classes.button} onClick={this.bandler(3)}>CONTACT</Button>
             </div>
             <SocialMediaButtons />
           </Toolbar>

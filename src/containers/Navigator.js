@@ -35,7 +35,7 @@ class Navigator extends Component {
     const {classes} = this.props;
     return (
       <div>
-        <Header onClick={this.headerOnClick}/>
+        <Header sliderSelectedItem={this.state.sliderSelectedItem} onClick={this.headerOnClick}/>
         <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}/>
         <Footer />
       </div>
