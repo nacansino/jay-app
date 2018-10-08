@@ -9,14 +9,19 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   root: {
   },
+  appbar:{
+    backgroundColor:'rgba(0,0,0,0)',
+    boxShadow: "none",
+    position:'absolute'
+  },
 };
 
 function Footer(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
+    <div>
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <Typography variant="body2" color="inherit">
             This is a Footer
