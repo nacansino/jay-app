@@ -7,12 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import SvgIcon from '@material-ui/core/SvgIcon';
-import IconButton from '@material-ui/core/IconButton';
-import Icon from '@material-ui/core/Icon';
-import DeleteIcon from '@material-ui/icons/Delete';
-
-import Grid from '@material-ui/core/Grid';
+import SocialMediaButtons from '../components/SocialMediaButtons'
 
 const styles = theme => ({
   root: {
@@ -55,9 +50,7 @@ function Header(props) {
             <Button className={classes.button} href="#">Default</Button>
             <Button className={classes.button} href="/about">About</Button>
           </div>
-          <IconButton className={classes.button}>
-            Social Media Icons Here
-          </IconButton>
+          <SocialMediaButtons />
         </Toolbar>
       </AppBar>
     </div>
