@@ -11,7 +11,7 @@ import Fade from 'react-reveal/Fade'
 
 class SliderContainer extends Component {
   sliderChange = (index, element) => {
-
+      this.props.onClick(index);
   }
 
   render() {

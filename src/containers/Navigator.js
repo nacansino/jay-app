@@ -22,7 +22,7 @@ class Navigator extends Component {
     sliderSelectedItem: 0,
   };
 
-  headerOnClick = (index) => {
+  changeSelectedItem = (index) => {
     console.log('received index '+ index);
     this.setState(
       {
@@ -35,8 +35,8 @@ class Navigator extends Component {
     const {classes} = this.props;
     return (
       <div>
-        <Header sliderSelectedItem={this.state.sliderSelectedItem} onClick={this.headerOnClick}/>
-        <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}/>
+        <Header sliderSelectedItem={this.state.sliderSelectedItem} onClick={this.changeSelectedItem}/>
+        <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}  onClick={this.changeSelectedItem}/>
         <Footer />
       </div>
     );
