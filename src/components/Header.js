@@ -15,17 +15,18 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
+    color: 'rgba(255, 255, 255, 1)'
   },
   button_current: {
     margin: theme.spacing.unit,
-    color: 'rgba(0, 0, 0, 0.5)',
+    color: 'rgba(0, 0, 0, 0.5)'
   },
   button_home: {
     margin: theme.spacing.unit,
   },
   appbar:{
     display: 'flex',
-    backgroundColor:'rgba(0,0,0,0)',
+    backgroundColor:'rgba(0,0,0,0.1)',
     boxShadow: "none",
     position:'absolute',
   },
@@ -35,8 +36,9 @@ const styles = theme => ({
     justifyContent: 'center',
   },
   bTitle: {
+    color: 'rgba(255,255, 255, 1)',
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   smbutton: {
     margin: theme.spacing.unit,
@@ -56,7 +58,7 @@ class Header extends Component {
   render() {
     const {classes} = this.props;
 
-    const headerMenu=['ABOUT ME', 'WORKS','BLOGS','CONTACT'];//change this to add headerMenu
+    const headerMenu=['WELCOME', 'WORKS','BLOGS','CONTACT'];//change this to add headerMenu
     return (
       <div className={classes.root}>
         <AppBar position="static" className={classes.appbar}>
