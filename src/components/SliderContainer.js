@@ -25,12 +25,12 @@ const styles = theme => ({
   },
   bigH: {
       color: 'white',
-      font: '900 20vmin/50vh cookie, cursive',
+      font: '300 20vmin/50vh roboto',
       textAlign: 'center',
   },
   smallH: {
       color: 'white',
-      font: '900 20vmin/50vh cookie, cursive',
+      font: '900 20vmin/50vh Lato',
       textAlign: 'center',
   },
   flexContainer: {

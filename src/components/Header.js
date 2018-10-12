@@ -26,7 +26,7 @@ const styles = theme => ({
   },
   appbar:{
     display: 'flex',
-    backgroundColor:'rgba(0,0,0,0.1)',
+    backgroundColor:'rgba(0,0,0,0.2)',
     boxShadow: "none",
     position:'absolute',
   },
@@ -37,8 +37,8 @@ const styles = theme => ({
   },
   bTitle: {
     color: 'rgba(255,255, 255, 1)',
-    marginLeft: -12,
-    marginRight: 20
+    fontWeight: '500',
+    font: '500 2vmin/1vh roboto'
   },
   smbutton: {
     margin: theme.spacing.unit,
@@ -63,7 +63,7 @@ class Header extends Component {
       <div className={classes.root}>
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <Button classes={classes.bTitle} href="/">JAY CANSINO BLOG</Button>
+            <Button href="/"><Typography className={classes.bTitle}>JAY CANSINO BLOG</Typography></Button>
             <div className={classes.hMenu}>
               {
                 headerMenu.map((item,index) =>
