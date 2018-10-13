@@ -84,6 +84,7 @@ class SliderContainer extends Component {
       <Carousel selectedItem={this.props.sliderSelectedItem}
          showThumbs={false} axis='vertical'
          showStatus={false}
+         showIndicators={false}
          useKeyboardArrows={true}
          showArrows={false}
          onChange={this.sliderChange}

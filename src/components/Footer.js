@@ -10,9 +10,10 @@ const styles = {
   root: {
   },
   appbar:{
-    backgroundColor:'rgba(0,0,0,0)',
+    background:'linear-gradient(to bottom, rgb(0,0,0, 00), rgb(0,0,0, 0.75))',
     boxShadow: "none",
-    position:'absolute'
+    position:'absolute',
+    alignSelf: 'flex-end'
   },
 };
 

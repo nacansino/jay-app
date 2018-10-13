@@ -15,20 +15,21 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
-    color: 'rgba(255, 255, 255, 1)'
+    color: '	rgb(240,240,240)'
   },
   button_current: {
     margin: theme.spacing.unit,
-    color: 'rgba(0, 0, 0, 0.5)'
+    color: '	rgb(192,192,192)'
   },
   button_home: {
     margin: theme.spacing.unit,
   },
   appbar:{
     display: 'flex',
-    backgroundColor:'rgba(0,0,0,0.2)',
+    background:'linear-gradient(to bottom, rgb(0,0,0, 0.45), rgb(0,0,0, 0))',
     boxShadow: "none",
     position:'absolute',
+    height: 'calc(10vh)'
   },
   hMenu: {
     display: 'flex',
@@ -36,7 +37,7 @@ const styles = theme => ({
     justifyContent: 'center',
   },
   bTitle: {
-    color: 'rgba(255,255, 255, 1)',
+    color: 'rgb(240,240,240)',
     fontWeight: '500',
     font: '500 2vmin/1vh roboto'
   },

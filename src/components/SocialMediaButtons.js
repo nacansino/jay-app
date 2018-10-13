@@ -9,7 +9,7 @@ const styles = theme => ({
     flexGrow: 1,
   },
   smbutton: {
-    margin: theme.spacing.unit,
+    fill: 'rgb(240,240,240)'
   },
   but: {
     width: 18,
@@ -54,10 +54,10 @@ function SocialMediaButtons(props) {
   const { classes } = props;
   return (
     <div>
-      <IconButton href="https://fb.com/nacansino"><FbIcon /></IconButton>
-      <IconButton href="https://twitter.com/njStaCansi"><TwIcon /></IconButton>
-      <IconButton href="https://instagram.com/jaycansino_"><IgIcon /></IconButton>
-      <IconButton href="https://www.linkedin.com/in/nacansino/"><LkInIcon /></IconButton>
+      <IconButton href="https://fb.com/nacansino"><FbIcon className={classes.smbutton} /></IconButton>
+      <IconButton href="https://twitter.com/njStaCansi"><TwIcon className={classes.smbutton} /></IconButton>
+      <IconButton href="https://instagram.com/jaycansino_"><IgIcon className={classes.smbutton} /></IconButton>
+      <IconButton href="https://www.linkedin.com/in/nacansino/"><LkInIcon className={classes.smbutton} /></IconButton>
     </div>
   );
 }

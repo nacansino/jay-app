@@ -10,8 +10,6 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'flex-start',
     width: '100%',
     height: '100vh'
   }
@@ -34,7 +32,7 @@ class Navigator extends Component {
   render() {
     const {classes} = this.props;
     return (
-      <div>
+      <div className={classes.root}>
         <Header sliderSelectedItem={this.state.sliderSelectedItem} onClick={this.changeSelectedItem}/>
         <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}  onClick={this.changeSelectedItem}/>
         <Footer />
