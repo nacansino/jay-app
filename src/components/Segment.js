@@ -1,54 +1,53 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles'
 
-import H_main from '../assets/img/h_main.jpg'
-import H_life from '../assets/img/h_life.jpg'
-import H_adventure from '../assets/img/h_adventure.jpg'
-import H_contact from '../assets/img/h_contact.jpg'
+import HMain from '../assets/img/h_main.jpg'
+import HLife from '../assets/img/h_life.jpg'
+import HAdventure from '../assets/img/h_adventure.jpg'
+import HContact from '../assets/img/h_contact.jpg'
 
 const styles = {
   segment: {
+    display: 'flex',
     backgroundPosition: 'top',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: '100vh'
-  },
-};
+  }
+}
 
 const dispImg = (param) => {
-  switch(param) {
+  switch (param) {
     case 'welcome':
-      return {backgroundImage: 'url(' + H_main + ')'};
+      return { backgroundImage: 'url(' + HMain + ')' }
     case 'life':
-      return {backgroundImage: 'url(' + H_life + ')'};
+      return { backgroundImage: 'url(' + HLife + ')' }
     case 'adventure':
-      return {backgroundImage: 'url(' + H_adventure + ')'};
+      return { backgroundImage: 'url(' + HAdventure + ')' }
     case 'contact':
-      return {backgroundImage: 'url(' + H_contact + ')'};
+      return { backgroundImage: 'url(' + HContact + ')' }
     default:
-      return {backgroundImage: 'url(' + H_main + ')'};
+      return { backgroundImage: 'url(' + HMain + ')' }
   }
-};
+}
 
 class Segment extends Component {
-  render() {
-  const {classes} = this.props;
-  return (
-    <div className={classes.segment} style={dispImg(this.props.imgname)}>
-      {this.props.children}
-    </div>
-  );
+  render () {
+    const { classes } = this.props
+    return (
+      <div className={classes.segment} style={dispImg(this.props.imgname)}>
+        {this.props.children}
+      </div>
+    )
   }
 }
 
 Segment.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+  classes: PropTypes.object.isRequired
+}
 
-export default withStyles(styles)(Segment);
+export default withStyles(styles)(Segment)

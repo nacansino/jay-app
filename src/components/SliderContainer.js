@@ -22,6 +22,7 @@ import Hidden from '@material-ui/core/Hidden';
 const styles = theme => ({
   root: {
     flexGrow: 1,
+    height: '100vh'
   },
   bigH: {
       color: 'white',
@@ -34,8 +35,8 @@ const styles = theme => ({
       textAlign: 'center',
   },
   flexContainer: {
+    flexGrow: 1,
     display: 'flex',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     margin: '0 10vh'
@@ -81,6 +82,7 @@ class SliderContainer extends Component {
     ];
     const {classes} = this.props
     return (
+      <div className={classes.root}>
       <Carousel selectedItem={this.props.sliderSelectedItem}
          showThumbs={false} axis='vertical'
          showStatus={false}
@@ -142,6 +144,7 @@ class SliderContainer extends Component {
         </Segment>
         <Segment imgname={'contact'}></Segment>
       </Carousel>
+    </div>
     );
   }
 }

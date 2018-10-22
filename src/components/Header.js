@@ -11,7 +11,7 @@ import SocialMediaButtons from '../components/SocialMediaButtons';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 0,
   },
   button: {
     margin: theme.spacing.unit,
