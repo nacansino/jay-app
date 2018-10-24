@@ -6,6 +6,8 @@ import {Carousel} from 'react-responsive-carousel'
 
 import { withStyles } from '@material-ui/core/styles'
 
+import { Debounce } from '../utils/function'
+
 import HMain from '../assets/img/h_main.jpg'
 import HLife from '../assets/img/h_life.jpg'
 
@@ -33,19 +35,25 @@ const styles = {
 }
 
 class Trial extends Component {
-  componentDidMount: function() {
-    window.addEventListener('scroll', this.handleScroll);
+  componentDidMount(){
+    window.addEventListener('scroll', Debounce(this.handleScroll, 200));
   }
-  componentWillUnmount: function() {
-      window.removeEventListener('scroll', this.handleScroll);
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+  handleScroll= () => {
+    console.log("pageYOfset: " + window.pageYOffset)
+  }
+  handleScroll2= () => {
+    console.log(window.pageYOffset)
   }
   render () {
     const { classes } = this.props
     return (
       <div>
-      <div className={classes.segment}>
+      <div onScroll={this.handleScroll2} className={classes.segment}>
       </div>
-      <div className={classes.segment2}>
+      <div ref={(ref) => this.scrollIcon = ref} className={classes.segment}>
       </div>
     </div>
     )
