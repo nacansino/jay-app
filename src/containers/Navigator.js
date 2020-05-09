@@ -10,24 +10,35 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'flex-start',
     width: '100%',
     height: '100vh'
   }
 };
 
-class Home extends Component {
+class Navigator extends Component {
+  state = {
+    sliderSelectedItem: 0,
+  };
+
+  changeSelectedItem = (index) => {
+    console.log('received index '+ index);
+    this.setState(
+      {
+        sliderSelectedItem: index
+      },
+    );
+  }
+
   render() {
     const {classes} = this.props;
     return (
-      <div>
-        <Header />
-        <SliderContainer />
+      <div className={classes.root}>
+        <Header sliderSelectedItem={this.state.sliderSelectedItem} onClick={this.changeSelectedItem}/>
+        <SliderContainer sliderSelectedItem={this.state.sliderSelectedItem}  onClick={this.changeSelectedItem}/>
         <Footer />
       </div>
     );
   }
 }
 
-export default withStyles(styles)(Home);
+export default withStyles(styles)(Navigator);
