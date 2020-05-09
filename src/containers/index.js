@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Navigator from './Navigator'
 import NotFound from './NotFound'
 import AboutUs from './AboutUs'
-import Trial from './Trial'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 class Containers extends Component {
@@ -12,7 +11,6 @@ class Containers extends Component {
         <Switch>
           <Route exact path='/' render={() => <Navigator />} />
           <Route exact path='/about' render={() => <AboutUs />} />
-          <Route exact path='/Trial' render={() => <Trial />} />
           <Route exact path='*' render={() => <NotFound />} />
         </Switch>
       </BrowserRouter>
