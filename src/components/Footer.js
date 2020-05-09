@@ -24,7 +24,7 @@ function Footer (props) {
     <AppBar position='static' className={classes.appbar}>
       <Toolbar>
         <Typography variant='body2' color='inherit'>
-            This is a Footer
+            This is a Footer....
         </Typography>
       </Toolbar>
     </AppBar>
