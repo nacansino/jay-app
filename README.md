@@ -1,4 +1,4 @@
-# Jay-App [build-status](https://travis-ci.com/nacansino/jay-app.svg?branch=develop)
+# Jay-App [![Build Status](https://travis-ci.com/nacansino/jay-app.svg?branch=develop)](https://travis-ci.com/nacansino/jay-app)
 My personal website built on React App (default README.md left as is below)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
