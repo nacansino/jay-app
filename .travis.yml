@@ -1,0 +1,13 @@
+# This is a sample build and test yaml script for my react app
+
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+on:
+  branch: master
